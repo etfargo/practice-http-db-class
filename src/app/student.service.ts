@@ -34,4 +34,10 @@ export class StudentService {
         })
       );
   }
+
+  clearData() {
+    return this.http.delete(
+      "https://studentinfo-6a345-default-rtdb.firebaseio.com/" + "student.json"
+    );
+  }
 }
